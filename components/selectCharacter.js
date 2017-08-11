@@ -15,6 +15,6 @@ export default ({
     <img src={image.url} />
     <audio src={characterSFX.url} />
     <p>
-      {characterName}
+      {name}
     </p>
   </div>
