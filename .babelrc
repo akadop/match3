@@ -12,7 +12,9 @@
     },
     "plugins": [
       [
-        "ramda",
+        "ramda"
+      ],
+      [
         "styled-components",
         {
           "ssr": true,
