@@ -134,7 +134,7 @@ const SelectDriverList = styled(DriversList)`
 
   .driverItem {
     margin: 1em;
-    width: 10%;
+    width: 7.5%;
     &:hover {
       color: #32325d !important;
       transform: translateY(-3px);
