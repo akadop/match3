@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 const driverPanelBase = ({
+  actions: { closeDriverPanel },
   data: { Driver },
   className,
   driverPanelIsOpen,
-  selectedDriver,
-  actions: { closeDriverPanel }
+  selectedDriver
 }) => {
   return Driver
     ? <div className={className} onClick={closeDriverPanel}>

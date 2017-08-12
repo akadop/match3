@@ -1,14 +1,13 @@
-import styled, { injectGlobal } from 'styled-components'
-
 import { map } from 'ramda'
+import styled from 'styled-components'
 
 // this component is not meant to be data-aware yet, so i'm just passing props that we're going eventually make meaningful with mapDispatchToProps / mapActionsToProps (redux).
 
 const DriversList = ({
+  actions: { openDriverPanel, selectDriver },
   data: { allDrivers = [] },
   selectedDriver,
-  className,
-  actions: { openDriverPanel, selectDriver }
+  className
 }) => {
   return (
     <div className={className}>
@@ -31,110 +30,33 @@ const DriversList = ({
 
 // now we style our base component and export it to make it a data-aware component, aka container
 
-injectGlobal`
-* {
-  box-sizing: border-box;
-}
-
-blockquote,
-body,
-button,
-dd,
-dl,
-figure,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ol,
-p,
-pre,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-button,
-select {
-  border: none;
-  outline: none;
-  background: none;
-  font-family: inherit;
-}
-
-a,
-button,
-input,
-select,
-textarea {
-  -webkit-tap-highlight-color: transparent;
-}
-
-:root {
-  overflow-x: hidden;
-  height: 100%;
-}
-
-html {
-  -moz-osx-font-smoothing: grayscaled;
-  -ms-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  box-sizing: border-box;
-  font-size: 62.5%;
-  overflow-x: hidden;
-  text-rendering: optimizeLegibility;
-  text-size-adjust: 100%;
-  max-height: 100vh;
-}
-
-body {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 1.3rem;
-  padding: 0;
-  background: url('./static/bg.svg');
-  background-position: cover;
-}`
-
 const SelectDriverList = styled(DriversList)`
+  align-content: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
-  justify-items: flex-end;
-  justify-content: flex-end;
-  min-height: 100vh;
   height: 100vh;
+  justify-content: flex-end;
+  justify-items: flex-end;
   max-height: 100vh;
+  min-height: 100vh;
   
   .driversRow {
-    display: flex;
-    justify-items: center;
-    align-items: center;
     align-content: center;
-    justify-content: center;
+    align-items: center;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
     margin-bottom: 10px;
   }
 
   .driverItem {
-    margin: 1em;
-    width: 7.5%;
+    margin: 1.5em;
+    border-radius: 60px;
+    width: 8.5%;
+    
     &:hover {
       color: #32325d !important;
       transform: translateY(-3px);
