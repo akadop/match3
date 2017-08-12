@@ -36,11 +36,8 @@ const SelectDriverList = styled(DriversList)`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 100vh;
   justify-content: flex-end;
   justify-items: flex-end;
-  max-height: 100vh;
-  min-height: 100vh;
   
   .driversRow {
     align-content: center;
@@ -49,13 +46,14 @@ const SelectDriverList = styled(DriversList)`
     flex-wrap: wrap;
     justify-content: center;
     justify-items: center;
-    margin-bottom: 10px;
+    padding-right: 4em;
+    padding-left: 4em;
   }
 
   .driverItem {
     margin: 1.5em;
-    border-radius: 60px;
-    width: 8.5%;
+    border-radius: 100px;
+    width: 8.0%;
     
     &:hover {
       color: #32325d !important;

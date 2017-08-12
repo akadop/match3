@@ -36,10 +36,10 @@ a {
 
 button,
 select {
-  border: none;
-  outline: none;
   background: none;
+  border: none;
   font-family: inherit;
+  outline: none;
 }
 
 a,
@@ -57,26 +57,31 @@ textarea {
 
 html {
   -moz-osx-font-smoothing: grayscaled;
-  -ms-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  font-size: 62.5%;
+  height: 100%;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
-  max-height: 100vh;
+  width: 100%;
 }
 
 body {
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 1.3rem;
-  padding: 0;
-  background: url('./static/bg.svg');
+  background-color: #2d2d2d;
   background-position: cover;
-}`
+  background: url('./static/bg.svg');
+  color: white;
+  display: block;
+  font-size: 1.3rem;
+  font-weight: normal;
+  min-height: 100%;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+}
+`
 
 export default globalStyle
