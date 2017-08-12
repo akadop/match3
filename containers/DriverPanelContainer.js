@@ -1,8 +1,8 @@
+import { compose, graphql } from 'react-apollo'
+
 import { DriverPanel } from '../components/DriverPanel'
 import { closeDriverPanel } from '../lib/redux/actions/'
-import { compose } from 'ramda'
 import { connect } from 'react-redux'
-import { graphql } from 'react-apollo'
 import mapActions from '../lib/redux/mapActions'
 import queryDriver from '../lib/graphql/queryDriver'
 

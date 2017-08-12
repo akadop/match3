@@ -1,7 +1,7 @@
-import { map } from 'ramda'
 import styled from 'styled-components'
 
-// this component is not meant to be data-aware yet, so i'm just passing props that we're going eventually make meaningful with mapDispatchToProps / mapActionsToProps (redux).
+// this component is not meant to be data-aware yet
+// eventually make meaningful with mapDispatchToProps / mapActionsToProps (redux).
 
 const DriversList = ({
   actions: { openDriverPanel, selectDriver },

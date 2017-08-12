@@ -1,10 +1,9 @@
+import { compose, graphql } from 'react-apollo'
 import { openDriverPanel, selectDriver } from '../lib/redux/actions'
 
 import SelectDriverList from '../components/SelectDriverList'
 import allDrivers from '../lib/graphql/queryAllDrivers'
-import { compose } from 'ramda'
 import { connect } from 'react-redux'
-import { graphql } from 'react-apollo'
 import mapActions from '../lib/redux/mapActions'
 
 export const mapStateToProps = ({
