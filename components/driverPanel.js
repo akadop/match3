@@ -9,8 +9,12 @@ const driverPanelBase = ({
 }) => {
   return (
     <div className={className}>
+      <div className="driverLeft">
+        <h1>Mario Kart, Match edition.</h1>
+        <p>A little less dangerous than driving on US75.</p>
+      </div>
       {Driver && driverPanelIsOpen
-        ? <div className="driverInfoPanel" onClick={closeDriverPanel}>
+        ? <div className="driverRight" onClick={closeDriverPanel}>
             <h1>
               {Driver.name}
             </h1>
@@ -31,7 +35,7 @@ export const DriverPanel = styled(driverPanelBase)`
   flex-wrap: wrap;
   justify-content: center;
 
-  .driverInfoPanel {
+  .driverLeft {
     flex: 1;
     display: flex;
     flex-direction: column;

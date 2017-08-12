@@ -12,9 +12,6 @@
     },
     "plugins": [
       [
-        "ramda"
-      ],
-      [
         "styled-components",
         {
           "ssr": true,
