@@ -74,13 +74,53 @@ body {
   background: url('./static/bg.svg');
   color: white;
   display: block;
-  font-size: 1.3rem;
+  font-size: 16px;
   font-weight: normal;
-  min-height: 100%;
   overflow: hidden;
   padding: 0;
   position: fixed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 6em;
+
+  @media only screen and (max-width: 1400px) {
+    font-size: 4.8em;
+  }
+
+  @media only screen and (max-width: 1250px) {
+    font-size: 4.4em;
+  }
+
+  @media only screen and (max-width: 720px) {
+    font-size: 3.2em;
+  }
+
+  @media only screen and (max-width: 520px) {
+    font-size: 2.8em;
+  }
+}
+
+.black-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg,rgba(0,0,0,.9),transparent);
+  z-index: 2;
 }
 `
 

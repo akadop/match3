@@ -11,19 +11,17 @@ const DriversList = ({
 }) => {
   return (
     <div className={className}>
-      <div className="driversRow">
-        {allDrivers.map((driver, index) =>
-          <div
-            key={driver.id}
-            className="driverItem"
-            onClick={() => {
-              selectDriver({ selectedDriver: driver.id }), openDriverPanel()
-            }}
-          >
-            <img src={driver.image.url} style={{ maxWidth: '100%' }} />
-          </div>
-        )}
-      </div>
+      {allDrivers.map((driver, index) =>
+        <div
+          key={driver.id}
+          className="driverItem"
+          onClick={() => {
+            selectDriver({ selectedDriver: driver.id }), openDriverPanel()
+          }}
+        >
+          <img src={driver.image.url} style={{ maxWidth: '100%' }} />
+        </div>
+      )}
     </div>
   )
 }
@@ -34,31 +32,18 @@ const SelectDriverList = styled(DriversList)`
   align-content: center;
   align-items: center;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  justify-items: flex-end;
-  
-  .driversRow {
-    align-content: center;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-items: center;
-    padding-right: 4em;
-    padding-left: 4em;
-  }
+  justify-content: center;
+  justify-items: center;
 
   .driverItem {
-    margin: 1.5em;
-    border-radius: 100px;
-    width: 8.0%;
+    margin: 1.0em;
+    width: 15%;
+    z-index: 99;
     
     &:hover {
       color: #32325d !important;
       transform: translateY(-3px);
-      box-shadow: 0 18px 35px rgba(50, 50, 93, .1), 0 8px 15px rgba(0, 0, 0, .07);
     }
   }
 `
