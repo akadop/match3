@@ -1,3 +1,5 @@
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/akadop/match3/tree/master)
+
 # 3 Component Challenge
 
 Built with: react + redux + graphql + styled components.
