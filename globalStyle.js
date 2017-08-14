@@ -1,4 +1,13 @@
-import { injectGlobal } from 'styled-components'
+import { injectGlobal, keyframes } from 'styled-components'
+
+const backgroundScroll = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-620px);
+  }
+`
 
 const globalStyle = injectGlobal`
 * {
@@ -34,14 +43,6 @@ a {
   text-decoration: none;
 }
 
-button,
-select {
-  background: none;
-  border: none;
-  font-family: inherit;
-  outline: none;
-}
-
 a,
 button,
 input,
@@ -60,7 +61,6 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   height: 100%;
-  overflow-x: hidden;
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
   width: 100%;
@@ -68,53 +68,53 @@ html {
 
 body {
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  background-color: #2d2d2d;
-  background-position: cover;
-  background: url('./static/bg.svg');
+    "Oxygen", sans-serif;
   color: white;
   display: block;
   font-size: 16px;
   font-weight: normal;
-  overflow: hidden;
-  padding: 0;
+  background-color: #2d2d2d;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: -0.05em;
-  font-style: italic;
+.animatedBg {
+  animation: ${backgroundScroll} 30s linear infinite;
+  background-color: #2d2d2d;
+  background-image: url('./static/marioKartItems.png');
+  background-position: cover;
+  background-repeat: repeat;
+  background-size: 928px auto;
+  bottom: 0;
+  box-sizing: content-box;
+  height: 100%;
+  left: 0;
+  opacity: 0.06;
+  padding-right: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  width: 1200px;
+  z-index: -1;
 }
 
 h1 {
   font-size: 6em;
-
-  @media only screen and (max-width: 1400px) {
-    font-size: 4.8em;
-  }
-
-  @media only screen and (max-width: 1250px) {
-    font-size: 4.4em;
-  }
-
-  @media only screen and (max-width: 720px) {
-    font-size: 3.2em;
-  }
-
-  @media only screen and (max-width: 520px) {
-    font-size: 2.8em;
-  }
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
 }
 
 .black-gradient {
   background: linear-gradient(0deg,rgba(0,0,0,.9),transparent);
-  z-index: 2;
-  width: 100%;
+  bottom: 0;
   height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0;
 }
 `
 

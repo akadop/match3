@@ -11,6 +11,7 @@ const DriversList = ({
 }) => {
   return (
     <div className={className}>
+      <h1>Select Your Character</h1>
       {allDrivers.map((driver, index) =>
         <div
           key={driver.id}
@@ -33,7 +34,7 @@ const SelectDriverList = styled(DriversList)`
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   justify-items: center;
   width: 100%;
 

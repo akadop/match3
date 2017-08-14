@@ -14,7 +14,7 @@ const driverPanelBase = ({
   title
 }) => {
   return (
-    <div className={className}>
+    <section className={className}>
       <div className="driverLeft">
         <img src={imageSrc} alt={imageAlt} />
         <h1>
@@ -34,7 +34,7 @@ const driverPanelBase = ({
         : <div className="driverRight">
             {children}
           </div>}
-    </div>
+    </section>
   )
 }
 
@@ -52,32 +52,33 @@ const pulsingHeart = keyframes`
 
 // styling our base component
 export const DriverPanel = styled(driverPanelBase)`
-  align-content: center;
   align-items: center;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 100vh;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0 2.5em 0 5em;
+  position: fixed;
   width: 100%;
 
   .driverLeft {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: -50px;
-    width: 50%;
+    flex: 1;
+    margin-top: -25px;
     > img {
       align-self: center;
       animation: ${pulsingHeart} 2s linear infinite;
       height: auto;
       margin-bottom: 4em;
+      margin-left: -2px; 
+      margin-top: -10px;
       width: 20em;
     }
 
     h1 {
       position: relative;
-      margin: 0 0 1.4rem;
+      margin: 0 0 1rem;
       &:before {
         background-color: #1044E9;
         bottom: .12em;
@@ -100,17 +101,16 @@ export const DriverPanel = styled(driverPanelBase)`
   }
 
   .driverRight {
-    align-content: stretch;
-    align-self: stretch;
-    background: #222;
-    box-shadow: 0 5px 100px, 0, rgba(black, .8);
+    flex: 1.1;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    padding: 2em;
+    align-self: stretch;
+    align-content: stretch;
+    padding: 3em;
+    background: #E91034;
+    box-shadow: 0 5px 100px 0 rgba(0, 0, 0, 0.8);
     transform: skewX(-24deg);
-    width: 50%;
     
     > * {
       transform: skewX(24deg);
