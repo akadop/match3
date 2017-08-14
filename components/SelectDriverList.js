@@ -35,6 +35,7 @@ const SelectDriverList = styled(DriversList)`
   flex-wrap: wrap;
   justify-content: center;
   justify-items: center;
+  width: 100%;
 
   .driverItem {
     margin: 1.0em;

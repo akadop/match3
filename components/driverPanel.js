@@ -1,13 +1,14 @@
 import styled, { keyframes } from 'styled-components'
 
+// base component
 const driverPanelBase = ({
   actions: { closeDriverPanel },
   data: { Driver },
   className,
   children,
   driverPanelIsOpen,
-  imgAlt,
-  imgSrc,
+  imageAlt,
+  imageSrc,
   selectedDriver,
   subHeading,
   title
@@ -15,7 +16,7 @@ const driverPanelBase = ({
   return (
     <div className={className}>
       <div className="driverLeft">
-        <img src={imgSrc} alt={imgAlt} />
+        <img src={imageSrc} alt={imageAlt} />
         <h1>
           {title}
         </h1>
@@ -48,8 +49,8 @@ const pulsingHeart = keyframes`
   80% { transform: scale(1); }
   100% { transform: scale(1); }
 `
-// styling our base component
 
+// styling our base component
 export const DriverPanel = styled(driverPanelBase)`
   align-content: center;
   align-items: center;
@@ -58,12 +59,14 @@ export const DriverPanel = styled(driverPanelBase)`
   flex-wrap: wrap;
   justify-content: center;
   height: 100vh;
+  width: 100%;
 
   .driverLeft {
-    flex: 1;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin-top: -50px;
+    width: 50%;
     > img {
       align-self: center;
       animation: ${pulsingHeart} 2s linear infinite;
@@ -97,27 +100,27 @@ export const DriverPanel = styled(driverPanelBase)`
   }
 
   .driverRight {
-    align-content: center;
+    align-content: stretch;
     align-self: stretch;
     background: #222;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    flex: 1.1;
-    justify-content: center;
-    padding: 4em;
     box-shadow: 0 5px 100px, 0, rgba(black, .8);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
     transform: skewX(-24deg);
+    width: 50%;
     
     > * {
       transform: skewX(24deg);
     }
 
     p {
+      color: black;
       font-size: .8em;
       font-weight: 800;
       letter-spacing: .1em;
-      color: black;
       opacity: .5;
     }
   }

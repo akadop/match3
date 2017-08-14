@@ -78,7 +78,6 @@ body {
   font-weight: normal;
   overflow: hidden;
   padding: 0;
-  position: fixed;
 }
 
 h1,
@@ -112,15 +111,10 @@ h1 {
 }
 
 .black-gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
   background: linear-gradient(0deg,rgba(0,0,0,.9),transparent);
   z-index: 2;
+  width: 100%;
+  height: 100%;
 }
 `
 
