@@ -30,19 +30,15 @@ const DriversList = ({
 // now we style our base component and export it to make it a data-aware component, aka container
 
 const SelectDriverList = styled(DriversList)`
-  align-content: center;
-  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  justify-items: center;
+  justify-items: flex-start;
   width: 100%;
 
   .driverItem {
-    margin: 1.0em;
-    width: 15%;
+    padding: 1.2em;
+    width: 21%;
     z-index: 99;
-    
     &:hover {
       color: #32325d !important;
       transform: translateY(-3px);

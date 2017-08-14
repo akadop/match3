@@ -5,7 +5,7 @@ const backgroundScroll = keyframes`
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-620px);
+    transform: translateX(-300px);
   }
 `
 
@@ -43,14 +43,6 @@ a {
   text-decoration: none;
 }
 
-a,
-button,
-input,
-select,
-textarea {
-  -webkit-tap-highlight-color: transparent;
-}
-
 :root {
   overflow-x: hidden;
   height: 100%;
@@ -60,20 +52,21 @@ html {
   -moz-osx-font-smoothing: grayscaled;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  min-height: 100vh;
   height: 100%;
   text-rendering: optimizeLegibility;
-  text-size-adjust: 100%;
   width: 100%;
 }
 
 body {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
-    "Oxygen", sans-serif;
+  background-color: #2d2d2d;
   color: white;
   display: block;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
+  "Oxygen", sans-serif;
   font-size: 16px;
   font-weight: normal;
-  background-color: #2d2d2d;
+  overflow: hidden;
 }
 
 .animatedBg {
@@ -81,13 +74,12 @@ body {
   background-color: #2d2d2d;
   background-image: url('./static/marioKartItems.png');
   background-position: cover;
-  background-repeat: repeat;
-  background-size: 928px auto;
+  background-size: 1200px auto;
   bottom: 0;
   box-sizing: content-box;
   height: 100%;
   left: 0;
-  opacity: 0.06;
+  opacity: 0.10;
   padding-right: 100%;
   position: absolute;
   right: 0;
@@ -98,11 +90,32 @@ body {
 }
 
 h1 {
-  font-size: 6em;
+  font-size: 5.4em;
   font-style: italic;
   font-weight: 800;
   letter-spacing: -0.05em;
   text-transform: uppercase;
+  
+  @media only screen and (max-width: 1400px) {
+    font-size: 4.4em;
+  }
+
+  @media only screen and (max-width: 1250px) {
+    font-size: 4.2em;
+  }
+
+  @media only screen and (max-width: 720px) {
+    font-size: 3.4em;
+  }
+
+  @media only screen and (max-width: 520px) {
+    font-size: 2.8em;
+  }
+}
+
+p {
+  font-size: .9em;
+  opacity: .5;
 }
 
 .black-gradient {

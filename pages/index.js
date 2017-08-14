@@ -10,7 +10,7 @@ export default WithData(props =>
     <DriverPanelContainer
       imageAlt="Broken Hearts at Match"
       imageSrc="./static/brokenHeart.svg"
-      subHeading="There is no love found on these streets. If you wish to return to the character selection menu, just click on the portrait of the current character selected."
+      subHeading="There is no love found on these streets."
       title="Mario Kart. Match Style."
     >
       <SelectDriverContainer />

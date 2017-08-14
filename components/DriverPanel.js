@@ -25,10 +25,14 @@ const driverPanelBase = ({
         </p>
       </div>
       {Driver && driverPanelIsOpen
-        ? <div className="driverRight" onClick={closeDriverPanel}>
-            <p>
+        ? <div className="driverSelected" onClick={closeDriverPanel}>
+            <h1>
               {Driver.name}
-            </p>
+            </h1>
+            <img
+              src={Driver.background.url}
+              style={{ maxWidth: '90%', margin: 'auto' }}
+            />
             <audio src={Driver.soundOnSelect.url} autoPlay="true" />
           </div>
         : <div className="driverRight">
@@ -64,16 +68,15 @@ export const DriverPanel = styled(driverPanelBase)`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin-right: 2em;
     flex: 1;
-    margin-top: -25px;
+    width: 40%;
     > img {
       align-self: center;
       animation: ${pulsingHeart} 2s linear infinite;
-      height: auto;
-      margin-bottom: 4em;
-      margin-left: -2px; 
-      margin-top: -10px;
-      width: 20em;
+      margin-bottom: 2em;
+      margin-top: 1em;
+      width: 16em;
     }
 
     h1 {
@@ -93,35 +96,67 @@ export const DriverPanel = styled(driverPanelBase)`
         z-index: -1;
       }
     }
-
-    p {
-      font-size: .9em;
-      opacity: .4;
-    }
   }
 
   .driverRight {
-    flex: 1.1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: stretch;
     align-content: stretch;
-    padding: 3em;
+    align-self: stretch;
     background: #E91034;
     box-shadow: 0 5px 100px 0 rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1.1;
+    justify-content: center;
+    padding: 5em;
     transform: skewX(-24deg);
     
     > * {
       transform: skewX(24deg);
     }
 
-    p {
-      color: black;
-      font-size: .8em;
-      font-weight: 800;
-      letter-spacing: .1em;
-      opacity: .5;
+    h1 {
+      position: relative;
+      text-align: right;
+      &:before {
+        background-color: #1044E9;
+        bottom: .12em;
+        box-shadow: 0 5px 80px, 4px, rgba(black, .5);
+        content: "";
+        display: block;
+        height: 1.15em;
+        left: -18%;
+        position: absolute;
+        transform: skewX(-24deg);
+        width: 200%;
+        z-index: -1;
+      }
     }
+  }
+
+    .driverSelected {
+      align-content: stretch;
+      align-self: stretch;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      flex: 1.1;
+      
+      h1 {
+        position: relative;
+        text-align: right;
+        &:before {
+          background-color: #27ae60;
+          bottom: .12em;
+          box-shadow: 0 5px 80px, 4px, rgba(black, .5);
+          content: "";
+          display: block;
+          height: 1.15em;
+          position: absolute;
+          transform: skewX(-24deg);
+          width: 200%;
+          z-index: -1;
+        }
+      }
   }
 `
