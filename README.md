@@ -1,14 +1,19 @@
 # 3 Component Challenge
 
-Built with: react + redux + graphql + styled components
+Built with: react + redux + graphql + styled components.
+
+## Component Pathway 
+
+Base (unstyled) component --> pass through styled function --> connect styled component to redux/apollo
 
 ## graphql schema.
 
 ```
 type Asset implements Node {
-  charactersImage: [Characters!]! @relation(name: "AssetCharactersImage")
-  charactersSoundOnSelect: [Characters!]! @relation(name: "AssetCharactersSoundOnSelect")
+  charactersImage: [Driver!]! @relation(name: "AssetCharactersImage")
+  charactersSoundOnSelect: [Driver!]! @relation(name: "AssetCharactersSoundOnSelect")
   createdAt: DateTime!
+  driverBackground: [Driver!]! @relation(name: "AssetDriverBackground")
   fileName: String
   handle: String
   height: Float
@@ -20,7 +25,8 @@ type Asset implements Node {
   width: Float
 }
 
-type Characters implements Node {
+type Driver implements Node {
+  background: Asset @relation(name: "AssetDriverBackground")
   createdAt: DateTime!
   id: ID! @isUnique
   image: Asset @relation(name: "AssetCharactersImage")
