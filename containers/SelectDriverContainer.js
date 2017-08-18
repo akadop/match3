@@ -25,7 +25,7 @@ export const mapDispatchToProps = mapActions({
 export const container = compose(
   connect(mapStateToProps, mapDispatchToProps),
   graphql(allDrivers, {
-    options: { fetchPolicy: 'network-only' }
+    options: { fetchPolicy: 'cache-and-network' }
   })
 )
 

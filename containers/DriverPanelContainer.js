@@ -28,7 +28,7 @@ export const container = compose(
       variables: {
         driverId: selectedDriver
       },
-      cache: 'network-only'
+      cache: 'cache-and-network'
     })
   })
 )
