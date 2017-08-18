@@ -30,10 +30,37 @@ const DriversList = ({
 // now we style our base component and export it to make it a data-aware component, aka container
 
 const SelectDriverList = styled(DriversList)`
+  align-content: center;
+  align-self: stretch;
+  background: #E91034;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-items: flex-start;
-  width: 100%;
+  justify-content: flex-end;
+  padding: 4em;
+  transform: skewX(-24deg);
+
+  > * {
+    transform: skewX(24deg);
+  }
+
+  h1 {
+    position: relative;
+    transform: skewX(24deg)
+    text-align: right;
+    &:before {
+      background-color: #1044E9;
+      bottom: .12em;
+      content: "";
+      display: block;
+      height: 1.15em;
+      left: -22%;
+      position: absolute;
+      transform: skewX(-24deg);
+      width: 200%;
+      z-index: -1;
+    }
+  }
 
   .driverItem {
     padding: 1.2em;
@@ -41,7 +68,10 @@ const SelectDriverList = styled(DriversList)`
     z-index: 99;
     &:hover {
       color: #32325d !important;
-      transform: translateY(-3px);
+      transform: translateY(-10px);
+      > img {
+        transform: skewX(24deg);
+      }
     }
   }
 `
