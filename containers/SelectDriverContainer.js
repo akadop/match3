@@ -1,10 +1,10 @@
 import { compose, graphql } from 'react-apollo'
-import { openDriverPanel, selectDriver } from '../lib/redux/actions'
 
 import SelectDriverList from '../components/SelectDriverList'
 import allDrivers from '../lib/graphql/queryAllDrivers'
 import { connect } from 'react-redux'
 import mapActions from '../lib/redux/mapActions'
+import { selectDriver } from '../lib/redux/actions'
 
 export const mapStateToProps = ({
   reducers: { selectedDriver, driverPanelIsOpen }
@@ -16,8 +16,7 @@ export const mapStateToProps = ({
 // map the actions defined in the redux/actions folder to the action props in our component
 
 export const mapDispatchToProps = mapActions({
-  selectDriver,
-  openDriverPanel
+  selectDriver
 })
 
 // combine redux actions, state, and graphql data --> export as container, or smart component
