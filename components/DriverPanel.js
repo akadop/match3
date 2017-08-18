@@ -51,11 +51,8 @@ const pulsingHeart = keyframes`
 export const DriverPanel = styled(driverPanelBase)`
   align-items: center;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   height: 100%;
-  justify-content: center;
-  padding: 0 2.5em 0 3em;
+  padding: 0 2.5em 0 5em;
   position: fixed;
 
   .driverLeft {
@@ -63,7 +60,7 @@ export const DriverPanel = styled(driverPanelBase)`
     flex-direction: column;
     flex-wrap: wrap;
     margin-right: 2em;
-    width: 45%;
+    width: 50%;
     > img {
       align-self: center;
       animation: ${pulsingHeart} 2s linear infinite;
@@ -75,19 +72,22 @@ export const DriverPanel = styled(driverPanelBase)`
 
   .driverRight {
     display: flex;
-    width: 55%;
+    width: 50%;
     height: 100%;
     flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
   }
 
   .driverSelected {
-    align-content: center;
-    align-self: space-around;
+    align-content: flex-end;
+    align-self: center;
     justify-content: center;
+    justify-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 55%;
+    width: 50%;
 
     h1 {
       position: relative;
