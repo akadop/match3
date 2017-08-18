@@ -4,7 +4,7 @@ import styled from 'styled-components'
 // eventually make meaningful with mapDispatchToProps / mapActionsToProps (redux).
 
 const DriversList = ({
-  actions: { openDriverPanel, selectDriver },
+  actions: { selectDriver },
   data: { allDrivers = [] },
   selectedDriver,
   className
@@ -17,7 +17,7 @@ const DriversList = ({
           key={driver.id}
           className="driverItem"
           onClick={() => {
-            selectDriver({ selectedDriver: driver.id }), openDriverPanel()
+            selectDriver({ selectedDriver: driver.id })
           }}
         >
           <img src={driver.image.url} style={{ maxWidth: '100%' }} />
