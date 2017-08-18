@@ -71,7 +71,7 @@ body {
 
 .animatedBg {
   animation: ${backgroundScroll} 30s linear infinite;
-  background-color: #2d2d2d;
+  background-color: #222;
   background-image: url('./static/marioKartItems.png');
   background-position: cover;
   background-size: 1200px auto;
@@ -90,7 +90,7 @@ body {
 }
 
 h1 {
-  font-size: 5.4em;
+  font-size: 5.8em;
   font-style: italic;
   font-weight: 800;
   letter-spacing: -0.05em;
@@ -105,11 +105,28 @@ h1 {
   }
 
   @media only screen and (max-width: 720px) {
-    font-size: 3.4em;
+    font-size: 3.0em;
   }
 
   @media only screen and (max-width: 520px) {
-    font-size: 2.8em;
+    font-size: 2.2em;
+  }
+}
+
+.driverLeft-Title {
+  position: relative;
+  margin: 0 0 1rem;
+  &:before {
+    background-color: #1044E9;
+    bottom: .12em;
+    content: "";
+    display: block;
+    height: 1.23em;
+    left: -95%;
+    position: absolute;
+    transform: skewX(-24deg);
+    width: 200%;
+    z-index: -1;
   }
 }
 
