@@ -68,7 +68,7 @@ const SelectDriverList = styled(DriversList)`
     z-index: 99;
     &:hover {
       color: #32325d !important;
-      transform: translateY(-10px);
+      transform: translateY(-4px);
       > img {
         transform: skewX(24deg);
       }
