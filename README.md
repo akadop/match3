@@ -2,6 +2,8 @@
 
 # 3 Component Challenge
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/akadop/match3.svg)](https://greenkeeper.io/)
+
 Built with: react + redux + graphql + styled components.
 
 ## Component Pathway 
